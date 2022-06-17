@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<h1>API Server</h1>
+			<h3>GET /chemicals</h3>
+			<p>
+				This route will return an array for each chemical in our app. All
+				details are included for the chemical: id, chemical name, CAS number and
+				manufacturer
+			</p>
+			<h3>GET /chemicals/:id</h3>
+			<p>
+				This route will return an array for a single chemical given its id in
+				our app. Only the required details for for the chemical: id, chemical
+				name, CAS number are included.
+			</p>
+			<h3>POST /chemicals</h3>
+			<p>
+				This route is used to create a new chemical item. In order to create a
+				new chemical, both a chemical name and CAS number must be provided in
+				the body of the request. The manufacturer information is optional(can be
+				NULL).
+			</p>
+			<code> {"chemicalName":"Test Chemical", "casNumber":"123-456-78"} </code>
+			<h3>PUT /chemicals/:id</h3>
+			<p>
+				This route is used update a chemical item given an id. In order to
+				create a new chemical, both a chemical name and CAS number must be
+				provided in the body of the request. The manufacturer information is
+				optional(can be NULL).
+			</p>
+			<code> {"chemicalName":"Test Chemical", "casNumber":"876-53-09"} </code>
+			<h3>DELETE /chemicals/:id</h3>
+			<p>
+				This route is to used delete a chemical item given an id. It will give a
+				204 response to let the client know that it was chemical item was
+				deleted.
+			</p>
+		</div>
+	</body>
+</html>
